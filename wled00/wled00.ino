@@ -204,7 +204,9 @@ bool e131Multicast = false;
 
 char mqttDeviceTopic[33] = "";                //main MQTT topic (individual per device, default is wled/mac)
 char mqttGroupTopic[33] = "wled/all";         //second MQTT topic (for example to group devices)
-char mqttServer[33] = "";                     //both domains and IPs should work (no SSL)
+char mqttServer[33] = "192.168.178.45";                     //both domains and IPs should work (no SSL)
+char MQTTUSER[33] = "Axel";
+char MQTTPASS[65] = "Waeggfsh2173";
 
 bool huePollingEnabled = false;               //poll hue bridge for light state
 uint16_t huePollIntervalMs = 2500;            //low values (< 1sec) may cause lag but offer quicker response
