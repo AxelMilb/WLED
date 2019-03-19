@@ -353,7 +353,7 @@ bool initMqtt()
   } else {
     mqtt->setServer(mqttServer, WLED_MQTT_PORT);
   }
-  mqtt->setClientId(escapedMac.c_str());
+  mqtt->setClientId(escapedMac.c_str(), MQTT_USER, MQTT_PASS))
   mqtt->onMessage(onMqttMessage);
   mqtt->onConnect(onMqttConnect);
   mqtt->connect();
